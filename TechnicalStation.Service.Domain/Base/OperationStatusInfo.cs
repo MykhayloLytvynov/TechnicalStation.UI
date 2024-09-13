@@ -1,0 +1,92 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using TechnicalStation.Service.Domain.Enum;
+
+namespace TechnicalStation.Service.Domain.Base
+{
+    public class OperationStatusInfo
+    {
+        protected string attachedInfo = string.Empty;
+
+        /// <summary>
+        /// The object.
+        /// </summary>
+        protected object attachedObject;
+
+        /// <summary>
+        /// The operation status id.
+        /// </summary>
+        protected byte operationStatusId;
+
+        /// <summary>
+        /// Gets or sets the attached info.
+        /// </summary>
+        public string AttachedInfo
+        {
+            get
+            {
+                return this.attachedInfo;
+            }
+
+            set
+            {
+                this.attachedInfo = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the attached object.
+        /// </summary>
+        public object AttachedObject
+        {
+            get
+            {
+                return this.attachedObject;
+            }
+
+            set
+            {
+                this.attachedObject = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the operation status.
+        /// </summary>
+        public OperationStatus OperationStatus
+        {
+            get
+            {
+                return (OperationStatus)this.operationStatusId;
+            }
+
+            set
+            {
+                this.operationStatusId = (byte)value;
+            }
+        }
+
+        public OperationStatusInfo()
+        {
+
+        }
+
+        public OperationStatusInfo(OperationStatus operationStatus)
+        {
+            this.operationStatusId = (byte)operationStatus;
+        }
+
+        public OperationStatusInfo(OperationStatus operationStatus, object attachedObject)
+        {
+            this.operationStatusId = (byte)operationStatus;
+            this.attachedObject = attachedObject;
+        }
+
+        public OperationStatusInfo(OperationStatus operationStatus, string attachedInfo)
+        {
+            this.operationStatusId = (byte)operationStatus;
+            this.attachedInfo = attachedInfo;
+        }
+    }
+}

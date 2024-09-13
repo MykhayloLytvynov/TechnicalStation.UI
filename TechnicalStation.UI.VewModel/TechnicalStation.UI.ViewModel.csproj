@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{370566AD-64B5-4F8F-B4A3-938AFFF692CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnicalStation.UI.VewModel</RootNamespace>
+    <AssemblyName>TechnicalStation.UI.VewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Car\AddCarViewModel.cs" />
+    <Compile Include="Car\CarCollectionViewModel.cs" />
+    <Compile Include="Customer\AddCustomerViewModel.cs" />
+    <Compile Include="Customer\CustomerCollectionViewModel.cs" />
+    <Compile Include="Customer\CustomerEditorViewModel.cs" />
+    <Compile Include="DashboardViewModel.Customer.cs" />
+    <Compile Include="Order\AddOrderViewModel.cs" />
+    <Compile Include="Worker\AddWorkerViewModel.cs" />
+    <Compile Include="Worker\WorkerCollectionViewModel.cs" />
+    <Compile Include="Worker\WorkerEditorViewModel.cs" />
+    <Compile Include="Work\AddWorkViewModel.cs" />
+    <Compile Include="Base\BindableBase.cs" />
+    <Compile Include="Base\CollectionViewModelBase.cs" />
+    <Compile Include="Base\ElementViewModelBase.cs" />
+    <Compile Include="Base\EntityViewModelBase.cs" />
+    <Compile Include="Base\ViewModelBase.cs" />
+    <Compile Include="Car\CarViewModel.cs" />
+    <Compile Include="Order\OrderCollectionViewModel.cs" />
+    <Compile Include="Context\DataContext.cs" />
+    <Compile Include="Customer\CustomerViewModel.cs" />
+    <Compile Include="DashboardViewModel.cs" />
+    <Compile Include="DashboardViewModel.Order.cs" />
+    <Compile Include="Order\OrderEditorViewModel.cs" />
+    <Compile Include="Extensions\ReflectionExtensions.cs" />
+    <Compile Include="Extensions\TransformExtensions.cs" />
+    <Compile Include="FilterViewModel.cs" />
+    <Compile Include="Order\OrderViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelFactory.cs" />
+    <Compile Include="Worker\WorkerViewModel.cs" />
+    <Compile Include="Work\WorkCollectionViewModel.cs" />
+    <Compile Include="Work\WorkViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TechnicalStation.Service.Client\TechnicalStation.Service.Client.Contract\TechnicalStation.Service.Client.Contract.csproj">
+      <Project>{b357a29c-d6f0-4cc3-a36c-26f1c3f43ffe}</Project>
+      <Name>TechnicalStation.Service.Client.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalStation.Service.Client\TechnicalStation.Service.Client\TechnicalStation.Service.Client.csproj">
+      <Project>{c2630498-265e-4792-b08b-ccca973b6cc2}</Project>
+      <Name>TechnicalStation.Service.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalStation.Service.Core.Console\TechnicalStation.Service.Domain\TechnicalStation.Service.Domain.csproj">
+      <Project>{b78c1d6e-7bfe-4327-b61b-f9a87b6f08b5}</Project>
+      <Name>TechnicalStation.Service.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.UI.Utility\Common.UI.Utility.csproj">
+      <Project>{cb47d93e-f741-4de4-935c-76d35f9b80d1}</Project>
+      <Name>Common.UI.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TechnicalStation.Service.Client.Stub\TechnicalStation.Service.Client.Stub.csproj">
+      <Project>{132761c2-ab74-45e4-af1b-aa3339658117}</Project>
+      <Name>TechnicalStation.Service.Client.Stub</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TechnicalStation.UI.Contract\TechnicalStation.UI.Contract.csproj">
+      <Project>{3adbc3cb-019b-43b5-b14c-ce5849b3c834}</Project>
+      <Name>TechnicalStation.UI.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

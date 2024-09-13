@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="TechnicalStation.UI.Control.DashboardControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TechnicalStation.UI.Control"
+             mc:Ignorable="d" Width="146" Height="755">
+    <Grid RenderTransformOrigin="-2.357,1.043" HorizontalAlignment="Left" Margin="-616,-14,0,39" Width="124">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="101" />
+            <RowDefinition />
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Orders" HorizontalAlignment="Left" Margin="10,33,0,0" Grid.Row="0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.32,-4.425" Command="{Binding Path=LoadOrdersCommand}" Height="58">
+            
+        </Button>
+
+        <GridSplitter HorizontalAlignment="Left" Height="730" Margin="116,0,-1478,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="1486" RenderTransformOrigin="0.475,0.492"/>
+        <DockPanel HorizontalAlignment="Left" Name="mainRegion" Height="730" LastChildFill="False" Margin="116,0,-798,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="806"/>
+        <Grid x:Name="EditControlRegion" HorizontalAlignment="Left" Height="720" Margin="116,10,-1478,0" VerticalAlignment="Top" Width="1486" Grid.RowSpan="2"/>
+        <Grid x:Name="AddFuncRegion" HorizontalAlignment="Left" Height="469" Margin="290,51,-643,0" Grid.Row="1" VerticalAlignment="Top" Width="477"/>
+        <Grid x:Name="OrderCollectionRegion" HorizontalAlignment="Left" Height="626" Margin="116,5,-738,-2" Grid.Row="1" VerticalAlignment="Top" Width="746" Grid.RowSpan="2"/>
+        <Button Content="Workers" Command="{Binding Path=LoadWorkersCommand}" Height="Auto" Margin="10,15,13,553" Grid.Row="1"/>
+        <Button Content="Customers" Command="{Binding Path=LoadCustomersCommand}" Height="Auto" Margin="10,101,13,467" Grid.Row="1"/>
+
+
+        <!--<Button Command="{Binding Path=AddOrderCommand}" HorizontalAlignment="Left" Margin="24,183,0,0" VerticalAlignment="Top" Width="74" Height="62" RenderTransformOrigin="3.042,0.383" Grid.Row="1">
+            <TextBlock Text="Add order" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button Command="{Binding Path=AddCustomerCommand}" HorizontalAlignment="Left" Margin="24,99,0,0" VerticalAlignment="Top" Width="74" Height="65" Grid.Row="1">
+            <TextBlock Text="Add customer" TextWrapping="Wrap" TextAlignment="Center" Width="45"/>
+        </Button>
+        <Button HorizontalAlignment="Left" 
+            Command="{Binding AddCarCommand}"
+            Margin="24,18,0,0" VerticalAlignment="Top" Width="74" Height="62" RenderTransformOrigin="-1.025,0.717" Grid.Row="1">
+            <TextBlock Text="Add car" TextWrapping="Wrap" TextAlignment="Center" Width="38"/>
+        </Button>-->
+    </Grid>
+
+</UserControl>

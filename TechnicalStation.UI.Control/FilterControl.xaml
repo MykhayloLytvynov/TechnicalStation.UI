@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="TechnicalStation.UI.Control.OrderFilterControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TechnicalStation.UI.Control"
+             mc:Ignorable="d" Height="554" Width="772.326" HorizontalAlignment="Center" Margin="-200,0,0,0">
+    <Grid Margin="0,0,0,10">
+        <TextBox HorizontalAlignment="Left" Height="44" Margin="56,104,0,0" TextWrapping="Wrap" Text="{Binding Path = FirstNameValue, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="169"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="56,193,0,0" TextWrapping="Wrap" Text="{Binding Path = SecondNameValue, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="169"/>
+        <TextBox HorizontalAlignment="Left" Height="51" Margin="56,278,0,0" TextWrapping="Wrap" Text="{Binding Path = PatronymicValue, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="169"/>
+        <TextBlock HorizontalAlignment="Left" Margin="56,76,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Height="23" Width="169"/>
+        <TextBlock HorizontalAlignment="Left" Margin="56,167,0,0" TextWrapping="Wrap" Text="Second Name" VerticalAlignment="Top" Height="21" Width="130" RenderTransformOrigin="0.48,1.296"/>
+        <TextBlock HorizontalAlignment="Left" Margin="56,256,0,0" TextWrapping="Wrap" Text="Patronymic" VerticalAlignment="Top" Width="80" Height="22" RenderTransformOrigin="0.55,-1.545"/>
+        <TextBlock HorizontalAlignment="Left" Margin="56,362,0,0" TextWrapping="Wrap" Text="Start Date" VerticalAlignment="Top" Height="20" Width="95"/>
+        <TextBlock HorizontalAlignment="Left" Margin="446,360,0,0" TextWrapping="Wrap" Text="Finish Date" VerticalAlignment="Top" Height="22" Width="78"/>
+        <Button Content="Apply" Command="{Binding Path=FilterCommand}" HorizontalAlignment="Left" Margin="74,472,0,0" VerticalAlignment="Top" Width="177" Height="53"/>
+        <Button Content="Cancel" Command="{Binding Path=CancelCommand}" HorizontalAlignment="Left" Margin="528,472,0,0" VerticalAlignment="Top" Width="177" Height="53"/>
+        <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Path = StartDate,
+                    ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="56,387,0,0" VerticalAlignment="Top" Width="240" Height="43"/>
+        <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Path = FinishDate,
+                    ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="446,387,0,0" VerticalAlignment="Top" Width="259" Height="43"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="544" VerticalAlignment="Top" Width="772"/>
+
+    </Grid>
+</UserControl>
